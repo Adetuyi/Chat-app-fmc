@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin:  0 auto;
+    width: fit-content;
+    padding: 0 2rem;
+}
+.purple{
+    background: linear-gradient(to bottom left, hsl(293, 100%, 45%), hsl(264, 100%, 61%));
+    width: 387px;
+    height: 120vh;
+    position: fixed;
+    top: -30vh;
+    left: -30px;
+    border-radius: 180px;
+    z-index: -1;
+}
+.phone{
+    max-width: 340px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    padding: .7rem;
+    margin-right: 4rem;
+    transform: scale(0.7);
+}
+.header{
+    color: hsl(0, 0%, 97%);
+    border: 0;
+    border-radius: 22px 22px 8px 8px;
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    padding: 2.5rem 1rem .7rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header::before{
+    content: "";
+    width: 67%;
+    height: 25px;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    background-color: #fff;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 8;
+
+}
+.header img{
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 .5rem 0 1rem;
+}
+.head{
+    display: inline-block;
+    width: 67%;
+}
+.name{
+    font-size: 16px;
+    font-weight: bold;
+}
+.status{
+    color: hsl(276, 100%, 81%);
+    font-size: 11px;
+}
+.chat{
+    padding: 1.4rem .7rem 1rem;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+
+}
+.received-chat{
+    max-width: 65%;
+    font-family: serif;
+    font-size: 12px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 15px 17px 17px 5px;
+    margin: 0 0 .7rem;
+    padding: .7rem;
+    color: hsl(276, 55%, 52%);
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    align-self: flex-end;
+}
+.images img{
+    width: 30%;
+    border-radius: 15px;
+}
+.sent-chat{
+    align-self: flex-end;
+    width: fit-content;
+    max-width: 60%;
+    color: hsl(271, 15%, 43%);
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 1px 7px hsl(0, 0%, 94%);
+    border-radius: 17px 15px 5px 17px;
+    margin: 0 0 .7rem;
+    padding: .7rem .7rem .7rem .9rem;
+
+}
+
+.highlight{
+    background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 15px 15px 15px 5px;
+    padding: .8rem 1.2rem .8rem 1rem;
+    color: #fff;
+    max-width: 80%;
+    font-size: 12px;
+    font-family: sans-serif;
+    letter-spacing: .3px;
+    margin-bottom: .6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.highlight span:first-child{
+    position: relative;
+    color: hsl(0, 0%, 91%);
+    padding-left: 20px;
+}
+.highlight span:first-child::before{
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 0;
+    top: -1px;
+    border: 1px solid hsl(289, 100%, 72%);
+    border-radius: 50%;
+}
+.price{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.message{
+    width: 100%;
+    margin-top: .4rem;
+    border-radius: 27px;
+    padding: .4rem .4rem .4rem 1.5rem;
+    font-size: 13px;
+    color: hsl(206, 6%, 79%);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.send{
+    background-color: hsl(271, 36%, 24%);
+    color: #fff;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 34px;
+}
+
+.section{
+    width: 385px;
+}
+.section h1{
+    color: hsl(271, 36%, 24%);
+    margin: 0;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+.section p{
+    color: hsl(270, 7%, 64%);
+    font-family: sans-serif;
+    line-height: 25px;
+    margin: .7rem 0;
+}
+
+@media only screen and (max-width: 475px){
+    main{
+        flex-direction: column;
+        padding: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .purple{
+        height: 500px;
+        left: -200px;
+    }
+    .phone{
+        margin: 0;
+    }
+    .section{
+        padding: 3rem;
+        text-align: center;
+    }
+    .section h1{
+        font-size: 33px;
+        margin-bottom: 1.3rem;
+        font-family: sans-serif;
+    }
+    .section p{
+        font-size: 15px;
+    }
+}
